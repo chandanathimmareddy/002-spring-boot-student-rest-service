@@ -17,7 +17,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level=AccessLevel.PRIVATE)
 public class Student {
 	
-    UUID id=UUID.randomUUID();
+    String id=UUID.randomUUID().toString();
     @NotBlank
     @NotNull
     @Size(min=2,message="Name should have atleast 2 characters")
@@ -25,7 +25,7 @@ public class Student {
 	Address address;
 	
 public Student() {}
-public Student(UUID id,String name,Address address)
+public Student(String id,String name,Address address)
 {
 	this.id=id;
 	this.name=name;

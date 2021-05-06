@@ -18,12 +18,12 @@ public class Address {
     String country;
      @NotNull
      @Size(min=2,message="zipcode should have atleast 2 integers")
-     int zipcode;
+    String zipcode;
 	
     public Address() {
 	}
 	
-       public Address(String street, String city,int zipcode, String country) {
+       public Address(String street, String city,String zipcode, String country) {
 		super();
 		this.street = street;
 		this.city = city;
